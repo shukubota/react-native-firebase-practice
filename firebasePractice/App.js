@@ -33,6 +33,10 @@ export default class App extends Component<Props> {
            // app NOT opened from a url
         }
     });
+    const unsubscribe = firebase.links().onLink((url) => {
+      console.log(url);
+      console.log('catch');
+    });
   }
   render() {
     return (
